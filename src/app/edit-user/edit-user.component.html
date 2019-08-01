@@ -1,0 +1,19 @@
+<form [formGroup]="userForm" (ngSubmit)="updateUser(userForm.value)" >
+
+  <input type="number" class="form-control" id="id" name="id" formControlName="id" type="hidden">
+  
+  <input type="text" class="form-control" id="name" name="name" formControlName="name" type="hidden">
+  
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="text" class="form-control" id="email" name="email" formControlName="email">
+  </div>
+
+    <input type="text" class="form-control" id="login" name="login" formControlName="login" type="hidden">
+
+  
+    <input type="password" class="form-control" id="password" name="password" formControlName="password" type="hidden">
+
+
+  <button type="submit" class="btn btn-block btn-primary">Submit</button>
+</form>

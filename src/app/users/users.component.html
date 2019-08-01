@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+      	<th>#</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Login</th>
+        <th colspan="2">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of dataSource; index as i">
+      	<td> {{i + 1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.login}}</td>
+        <td><button class="btn btn-block btn-danger" (click)="deleteUser(user.id)" >Excluir</button></td>
+        <td><a class="btn btn-block btn-primary" [routerLink]="'/edit/'+ user.id">Editar</a></td>
+      </tr>
+     
+    </tbody>
+  </table>
